@@ -15,6 +15,18 @@ class CreateStructureClaimantsTable extends Migration
     {
         Schema::create('structure_claimants', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('claimant_id')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('other_name')->nullable();
+            $table->string('location')->nullable();
+            $table->string('community')->nullable();
+            $table->string('coordinates')->nullable();
+            $table->longText('image')->nullable();
+            $table->longText('signature')->nullable();
+            $table->longText('attorney_signature')->nullable();
+            $table->longText('finger_print')->nullable();
+            $table->string('valuer_id')->nullable();
             $table->timestamps();
         });
     }
