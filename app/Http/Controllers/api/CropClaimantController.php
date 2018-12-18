@@ -48,7 +48,7 @@ class CropClaimantController extends Controller
     public function store(Request $request)
     {
         $claimant = CropClaimant::create([
-            'valuer_id' => '2',//::user()->id,
+            'valuer_id' => $request->valuer_id,
             'claimant_id' => $request->claimant_id,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
@@ -56,6 +56,8 @@ class CropClaimantController extends Controller
             'location' => $request->location,
             'community' => $request->community,
             'coordinates' => $request->coordinates,
+            'image' => $request->image,
+            'signature' => $request->c_signature,
         ]);   
         
         $claimant_id = $claimant->id;

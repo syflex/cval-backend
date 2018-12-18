@@ -22,10 +22,10 @@ class CreateCropClaimantsTable extends Migration
             $table->string('location')->nullable();
             $table->string('community')->nullable();
             $table->string('coordinates')->nullable();
-            $table->string('image')->nullable();
-            $table->string('signature')->nullable();
-            $table->string('attorney_signature')->nullable();
-            $table->string('finger_print')->nullable();
+            $table->longText('image')->nullable();
+            $table->longText('signature')->nullable();
+            $table->longText('attorney_signature')->nullable();
+            $table->longText('finger_print')->nullable();
             $table->string('valuer_id')->nullable();
             $table->timestamps();
         });
