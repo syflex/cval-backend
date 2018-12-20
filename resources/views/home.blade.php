@@ -13,8 +13,33 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                   
+                    <table class="table">
+                    <thead>
+                        <tr>
+                            <th> id</th>
+                            <th> name</th>
+                            <th> Community  </th>
+                            <th> Location </th>
+                            <th> coordinates</th>
+                            <th> Actions </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($claimant as $item)
+                        <tr>
+                            <td> {{$item->crop_claimant_id}}</td>
+                            <td> {{$item->first_name}} {{$item->last_name}} </td>
+                            <td> {{$item->community}} </td>
+                            <td> {{$item->location}} </td>
+                            <td> {{$item->coordinates}} </td>
+                            <td> 
+                                <a class="btn btn-small btn-success" href="{{ URL::to('pdf/' . $item->id) }}">Print</a>
+                            </td>
+                        </tr>
+                        @endforeach
+                </tbody>
+                </table>
                 </div>
             </div>
         </div>

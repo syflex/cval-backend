@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PDF;
+use App\CropClaimant;
+use App\CropData;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,36 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $claimant = CropClaimant::get();
+        return view('home', compact('claimant'));
+    }
+
+    public function generatePDF()
+    {
+
+        $data = ['title' => 'Welcome to HDTuto.com'];
+
+        $pdf = PDF::loadView('myPDF', $data);
+
+
+        return $pdf->download('hdtuto.pdf');
+
+    }
+
+    public function PDF($id)
+    {
+        $claimant = CropClaimant::where('id', $id)->first();
+
+        $data = CropData::where('crop_claimant_id', $claimant->id)->get();
+
+        return view('pdf', compact('claimant','data'));
+
+        // $data = ['title' => 'Welcome to HDTuto.com'];
+
+        // $pdf = PDF::loadView('myPDF', $data);
+
+
+        // return $pdf->download('hdtuto.pdf');
+
     }
 }

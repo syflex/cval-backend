@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 */
 Route::namespace('Api')->group(function () {
     Route::resource('crop', 'CropClaimantController');
+    Route::get('all', 'CropClaimantController@all');
+    Route::post('all', 'CropClaimantController@insertall');
     Route::resource('structure', 'StructureController');
 });
 

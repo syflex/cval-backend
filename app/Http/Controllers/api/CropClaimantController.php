@@ -29,6 +29,23 @@ class CropClaimantController extends Controller
         );
     }
 
+
+    public function all()
+    {
+        $claimant = CropClaimant::get();   
+        $data = CropData::get();
+       
+        return response()->json(
+            [
+                'status' => 'successful',
+                'claimant' => $claimant,
+                'data' => $data,
+                'message' => 'saved successfully'
+            ],
+            $this-> successStatus
+        );
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -76,6 +93,38 @@ class CropClaimantController extends Controller
             ],
             $this-> successStatus
         );
+    }
+
+    public function insertall(Request $request)
+    {
+        
+        foreach($request->claimants as $item){
+            $data[] = ['id' => $item['id'], 'attorney_signature' => $item['attorney_signature'], 
+            'claimant_id' => $item['claimant_id'], 'community' => $item['community'],'coordinates' => $item['coordinates'], 
+            'finger_print' => $item['finger_print'], 'first_name' => $item['first_name'], 'last_name' => $item['last_name'],
+            'location' => $item['location'], 'other_name' => $item['other_name'], 'valuer_id' => $item['valuer_id'],
+            'signature' => $item['signature'], 'image' => $item['image']
+        ];
+        };
+
+        CropClaimant::truncate();
+        $insert = CropClaimant::insert($data);
+
+        $data1 =[];
+        foreach($request->data as $item){
+            $data1  += ['id' => $item['id'], 'type' => $item['type'], 'name' => $item['name'], 'maturity' => $item['maturity'],'unit' => $item['unit'], 'price' => $item['price'], 'value' => $item['value'], 'crop_claimant_id' => $item['crop_claimant_id']];
+        };
+        CropData::truncate();
+        $insert = CropData::insert($data1);
+
+        // return response()->json(
+        //     [
+        //         'status' => 'successful',
+        //         'data' => $claimant,
+        //         'message' => 'saved successfully'
+        //     ],
+        //     $this-> successStatus
+        // );
     }
 
     /**
