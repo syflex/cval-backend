@@ -9,7 +9,11 @@
 			<img src="{{asset('img/nnpc.jpg')}}" width="200px">
 		</div>
 		<div class="col-8">
-			<h1>Nigerian national Perol</h1>
+			<h1>NIGERIAN NATIONAL PETROLEUM CORPORATION</h1>
+			<h2>COMPENSATION FOR LAND ACQUISITION FOR THE</h2>
+			<h3>AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h3>
+			<h4>(KADUNA SECTION LOT 12)</h4>
+			<h1>ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h1>
 		</div>
 	</div>
 <div class="card-body">

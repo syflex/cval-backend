@@ -48,14 +48,14 @@ class HomeController extends Controller
 
         $data = CropData::where('crop_claimant_id', $claimant->id)->get();
 
-        return view('pdf', compact('claimant','data'));
+        // return view('pdf', compact('claimant','data'));
 
-        // $data = ['title' => 'Welcome to HDTuto.com'];
+        
 
-        // $pdf = PDF::loadView('myPDF', $data);
+        $pdf = PDF::loadView('pdf', compact('claimant','data'));
 
 
-        // return $pdf->download('hdtuto.pdf');
+        return $pdf->download('NNPC.pdf');
 
     }
 }

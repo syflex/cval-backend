@@ -28,7 +28,7 @@
                     <tbody>
                         @foreach($claimant as $item)
                         <tr>
-                            <td> {{$item->crop_claimant_id}}</td>
+                            <td> {{$item->claimant_id}}</td>
                             <td> {{$item->first_name}} {{$item->last_name}} </td>
                             <td> {{$item->community}} </td>
                             <td> {{$item->location}} </td>
