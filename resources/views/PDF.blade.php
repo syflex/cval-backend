@@ -5,15 +5,15 @@
 <div class="container">
   <div class="card">
 	<div class="row">
-		<div class="col-4">
+		<div class="col-3">
 			<img src="{{asset('img/nnpc.jpg')}}" width="200px">
 		</div>
-		<div class="col-8">
-			<h1>NIGERIAN NATIONAL PETROLEUM CORPORATION</h1>
-			<h2>COMPENSATION FOR LAND ACQUISITION FOR THE</h2>
-			<h3>AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h3>
-			<h4>(KADUNA SECTION LOT 12)</h4>
-			<h1>ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h1>
+		<div class="col-9">
+			<h2 class="text-center">NIGERIAN NATIONAL PETROLEUM CORPORATION</h2>
+			<h3 class="text-center">COMPENSATION FOR LAND ACQUISITION FOR THE</h3>
+			<h4 class="text-center">AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h4>
+			<h4 class="text-center">(KADUNA SECTION LOT 12)</h4>
+			<h2 class="text-center">ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h2>
 		</div>
 	</div>
 <div class="card-body">
@@ -51,10 +51,10 @@
 @foreach($data as $key=> $item)
 <tr>
 <td class="center">{{ ++$key }}</td>
-<td class="left strong">{{$item->type}}</td>
-<td class="left">{{$item->name}}</td>
+<td class="left strong">{{$item->name}}</td>
+<td class="left">{{$item->unit}}</td>
 
-<td class="right">{{$item->unit}}</td>
+<td class="right">{{$item->price}}</td>
   <td class="center">{{$item->maturity}}</td>
 <td class="right">{{$item->value}}</td>
 </tr>
@@ -92,14 +92,14 @@
 <td class="right">N679,76</td>
 </tr> -->
 
-<tr>
+<!-- <tr>
 <td class="left">
 <strong>Total</strong>
 </td>
 <td class="right">
 <strong>N7.477,36</strong>
 </td>
-</tr>
+</tr> -->
 
 </tbody>
 </table>

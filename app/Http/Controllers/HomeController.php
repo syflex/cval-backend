@@ -48,14 +48,14 @@ class HomeController extends Controller
 
         $data = CropData::where('crop_claimant_id', $claimant->id)->get();
 
-        // return view('pdf', compact('claimant','data'));
+        return view('pdf', compact('claimant','data'));
 
         
 
-        $pdf = PDF::loadView('pdf', compact('claimant','data'));
+        // $pdf = PDF::loadView('PDF', compact('claimant','data'));
 
 
-        return $pdf->download('NNPC.pdf');
+        // return $pdf->download('NNPC.pdf');
 
     }
 }
