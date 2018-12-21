@@ -9,8 +9,20 @@
 
 <body>
 
+<div class="col-3">
+			<img src="{{ $claimant->image }}" width="100px">
+		</div>
 
-	<h1>{{ $title }}</h1>
+<div class="col-9">
+			<h2 class="text-center">NIGERIAN NATIONAL PETROLEUM CORPORATION</h2>
+			<h3 class="text-center">COMPENSATION FOR LAND ACQUISITION FOR THE</h3>
+			<h4 class="text-center">AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h4>
+			<h4 class="text-center">(KADUNA SECTION LOT 12)</h4>
+			<h2 class="text-center">ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h2>
+		</div>
+
+	<h1>{{ $claimant->first_name }}</h1>
+	<img src="{{$claimant->image}}">
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 

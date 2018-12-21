@@ -163,136 +163,75 @@ tbody tr:nth-of-type(2n+1) {
             <h2 style="line-height: 20px;">NIGERIAN NATIONAL PETROLEUM CORPORATION</h2>
 			<h3 style="line-height: 20px;">COMPENSATION FOR LAND ACQUISITION FOR THE</h3>
 			<h4 style="line-height: 20px;">AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h4>
-			<h4 style="line-height: 20px;">(KADUNA SECTION LOT 12)</h4><br>
-			<h2 style="text-decoration: underline">ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h2>
+			<h4 class="text-danger" style="line-height: 20px;">(KADUNA SECTION LOT 12)</h4><br>
+			
 		</div>
 	</div>
 <div class="card-body">
 <div class="row mb-4">
 
 <div class="col-sm-8">	
-	<div style="font-weight: bold;">Location: {{$claimant->location}}</div>
-	<div style="font-weight: bold;">Coordinate: {{$claimant->coordinates}}</div>
-	<div style="font-weight: bold;">Date of Inspection: {{$claimant->created_at}}</div>
-	<div style="font-weight: bold;">Identity Number: {{$claimant->claimant_id}}</div>
+	<div style="font-weight: bold;">Address: ______________________</div><br><br><br><br>
+    <h3 class="text-center" style="text-decoration: underline">INDEMNITY CERTIFICATE </h3>
 </div>
+
+
 
 <div class="col-sm-4 text-center">
-	<div><img src="{{$claimant->image}}" width="250px" style="border: 1px solid black;"></div><br>
-	<div style="border: 1px solid black; text-align: center; padding: 2px; font-weight: bold; font-size: 30px;">
-		{{$claimant->first_name}} {{$claimant->last_name}} {{$claimant->other_name}}
-	</div>
+	<div><img src="{{$claimant->image}}" width="250px" style="border: 1px solid black;"></div><br>	
 </div>
 
 
 
 </div>
 
-<div class="table-responsive-sm">
-<table class="table table-striped">
-<thead>
-<tr>
-<th class="center">S/N</th>
-<th>Economic Tree/Crops</th>
-<th>Quantity</th>
-<th class="right">Rate</th>
-<th class="center">Maturity</th>
-<th class="right">Value</th>
-</tr>
-</thead>
-<tbody>
+
 <?php $sum_value = 0 ?>
 @foreach($data as $key=> $item)
-<tr>
-<td class="center">{{ ++$key }}</td>
-<td class="left strong">{{$item->name}}</td>
-<td class="left">{{$item->unit}}</td>
-
-<td class="right">{{$item->price}}</td>
-  <td class="center">{{$item->maturity}}</td>
-<td class="right">{{$item->value}}</td>
-</tr>
 <?php $sum_value += $item->value ?>
 @endforeach
-</tbody>
-</table>
-</div>
+
 <div class="row">
-<div class="col-lg-4 col-sm-5">
+    <p>
+    This is to certify that I/We ______{{$claimant->first_name}} {{$claimant->last_name}} {{$claimant->other_name}}___________
+of___{{$claimant->community}}___ Community in _________________________ Local Government Area of
+________________________________ State, Nigeria received the sum of 
+N{{$sum_value}}_______________
+From Messrs__________________________________ Ehstate Surveyors & Valuers whose office is at
+_____________________________________________, Nigeria, being full and final compensation paid to me/us by the Nigerian National Patroleum Corporation (NNPC)in respect of me/our Structures/Economic Trees/Cash Crops/Farm Installations/structure(s)/Grave(s)/ Fishing Swamp/Community Deity/Shrine which falls within the land area described as ______________________________________________ acquired by the Federal Government of Nigeria for Nigerian National Petroleum Corporation (NNPC), for the construction of the proposed ______________________________________ in _________________ State, Nigeria.
 
-</div>
-
-<div class="col-lg-4 col-sm-5 ml-auto">
-<table class="table table-clear">
-<tbody>
-<!-- 
-<tr>
-<td class="left">
-<strong>Subtotal</strong>
-</td>
-<td class="right">N8.497,00</td>
-</tr>
-
-<tr>
-<td class="left">
-<strong>Discount (20%)</strong>
-</td>
-<td class="right">N1,699,40</td>
-</tr>
-
-<tr>
-<td class="left">
- <strong>VAT (10%)</strong>
-</td>
-<td class="right">N679,76</td>
-</tr> -->
-
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>
-	<strong>Total</strong>
-</td>
-<td>
-	<strong>{{ $sum_value }}</strong>
-</td>
-</tr>
-
-</tbody>
-</table>
-
-
-</div>
-
-<div class="row col-12">
-    <p style="line-height: 15px;">
-        this is to confirm that Messrs Muhammad & Co. staff visited my farmland and carried out the enumeration
-        of the above stated crops and economics trees in my presence/attorney and the claims above have been read 
-        and translated to me in my local dialect which i have agreed and consented. I hereby endorse this document
-        to confirm the true position of my claims.
+    </p>
+    <p>
+    In consideration of the said payment made to me, our Clan/Community of the above address by Messrs _________________________ representing Nigerian National Petroleum Corporation (NNPC). I/We hereby indemnigy _________________________ and Nigerian National Petroleum Corporation (NNPC), against all claims, counter claims made or litigation instituted by any person or persons who claim through me/us or on my/our behalf or separate for himself/themselves now or in the future in respect of the said Structures/Economic Trees/Cash Crops/Farm Installations/structure(s)/Grave(s)/ Fishing Swamp/Community Deity/Shrine contained in the stretch/area of land so affected by the said acquisition.
     </p>
 </div>
 
-<div class="row col-12">
-	<div class="col-4 text-center">
-        <div class="">
-            <br>
-            <div><span>________________________</span></div>
-            <div><span>Valuer's Name & Signature</span></div>
-        </div>
-	</div>
-	<div  class="col-4 text-center">
-        <div><img src="{{$claimant->signature}}" width="50px"></div>
-        <div><span>________________________</span></div>
-		<div><span>Claimant's Name & Signature</span></div>
-	</div>
-	<div  class="col-4 text-center">
-        <br>
-        <div><span>________________________</span></div>
-		<div><span>Attorney's Name & Signature</span></div>
-	</div>
+
+
+<div class="row">
+    <div class="col-6 text-center">
+       <div>Dated this …………………………………… Day of …………………… 2018</div>
+       <div>The above was interpreted to me/us 
+from English Language to 
+
+……………………………………………… and I/We perfectly understood same before affixing my/our thumb
+……………………………………………………………… 
+Interpreter 
 </div>
+    </div>
+    <div class="col-6 text-center">
+       <div>(i)	Signed sealed and delivered by Claimant 
+
+………………………………………………………………. 
+</div>
+<div>(ii)	Witnessed by the Representative of the Community and/or Attorney of Community/Clan
+
+………………………………………………………………. 
+
+</div>
+    </div>
+</div>
+
 
 <div>
     <div>

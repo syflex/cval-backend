@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -28,13 +28,14 @@
                     <tbody>
                         @foreach($claimant as $item)
                         <tr>
-                            <td> {{$item->claimant_id}}</td>
-                            <td> {{$item->first_name}} {{$item->last_name}} </td>
+                            <td> <p>{{$item->claimant_id}}</p></td>
+                            <td> <p>{{$item->first_name}} {{$item->last_name}}</p> </td>
                             <td> {{$item->community}} </td>
                             <td> {{$item->location}} </td>
                             <td> {{$item->coordinates}} </td>
                             <td> 
-                                <a class="btn btn-small btn-success" href="{{ URL::to('pdf/' . $item->id) }}">Print</a>
+                                <a class="btn btn-small btn-success btn-sm" href="{{ URL::to('pdf/' . $item->id) }}">Print</a>
+                                <a class="btn btn-small btn-success btn-sm" href="{{ URL::to('indemnity/' . $item->id) }}">Indemnity</a>
                             </td>
                         </tr>
                         @endforeach

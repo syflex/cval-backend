@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('generate-pdf','HomeController@generatePDF');
 Route::get('pdf/{id}','HomeController@PDF');
+Route::get('indemnity/{id}','HomeController@indemnity');
