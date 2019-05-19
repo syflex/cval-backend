@@ -80,7 +80,7 @@ class CropClaimantController extends Controller
         $claimant_id = $claimant->id;
 
         foreach($request->crops as $item){
-            $data[] = ['type' => $item['type'], 'name' => $item['name'], 'maturity' => $item['maturity'],'unit' => $item['unit'], 'price' => $item['price'], 'value' => $item['value'], 'crop_claimant_id' => $claimant_id];
+            $data[] = ['type' => $item['type']['value'], 'name' => $item['name']['value'], 'maturity' => $item['maturity']['value'],'unit' => $item['unit'], 'price' => $item['price'], 'value' => $item['value'], 'crop_claimant_id' => $claimant_id];
         }
 
         $insert = CropData::insert($data);
@@ -110,7 +110,7 @@ class CropClaimantController extends Controller
         CropClaimant::truncate();
         $insert = CropClaimant::insert($data);
 
-        $data1 =[];
+        $data1 = [];
         foreach($request->data as $item){
             $data1  += ['id' => $item['id'], 'type' => $item['type'], 'name' => $item['name'], 'maturity' => $item['maturity'],'unit' => $item['unit'], 'price' => $item['price'], 'value' => $item['value'], 'crop_claimant_id' => $item['crop_claimant_id']];
         };
