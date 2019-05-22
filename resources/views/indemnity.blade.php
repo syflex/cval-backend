@@ -150,21 +150,21 @@ tbody tr:nth-of-type(2n+1) {
 <div class="container">
   <div class="card">
 	<div class="row">
-		<div class="col-3">
-			<img src="{{$image}}" width="250px">
+		<div class="col-2">
+            <br><br><br>
+			<img src="{{$image}}" width="100%">
 		</div>
-		<div class="col-9 text-center">
-			<br><br><br>
-			<!-- <h2 style="text-align: center; line-height: 1px;">NIGERIAN NATIONAL PETROLEUM CORPORATION</h2>
-			<h3 style="text-align: center; line-height: 1px;">COMPENSATION FOR LAND ACQUISITION FOR THE</h3>
-			<h4 style="text-align: center; line-height: 1px;">AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h4>
-			<h4 style="text-align: center; line-height: 1px;">(KADUNA SECTION LOT 12)</h4>
-			<h2 style="text-align: center; text-decoration: underline">ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h2> -->
-            <h2 style="line-height: 20px;">NIGERIAN NATIONAL PETROLEUM CORPORATION</h2>
-			<h3 style="line-height: 20px;">COMPENSATION FOR LAND ACQUISITION FOR THE</h3>
-			<h4 style="line-height: 20px;">AJAOKUTA-KADUNA-KANO GAS PIPELINE RIGHT-OF-LAW</h4>
-			<h4 class="text-danger" style="line-height: 20px;">(KADUNA SECTION LOT 12)</h4><br>
-			
+		<div class="col-8 text-center">
+			<br><br>			
+            <h3 style="line-height: 20px;">NIGERIAN NATIONAL PETROLEUM CORPORATION</h3>
+			<h3 style="line-height: 20px;">COMPENSATION FOR LAND ACQUISITION FOR</h3>
+            <h3 style="line-height: 20px;">FRONTIER EXLORATIONS SERVICES</h3>
+            <br>
+			<h3 style="text-decoration: underline">ASSESSMENT SHEET FOR CROPS/ECONOMIC TREES</h3>
+        </div>
+        <div class="col-2">
+                <br><br><br>
+			<img src="{{$frontia}}" width="100%">
 		</div>
 	</div>
 <div class="card-body">
@@ -172,7 +172,7 @@ tbody tr:nth-of-type(2n+1) {
 
 <div class="col-sm-8">	
 	<div style="font-weight: bold;">Address: ______________________</div><br><br><br><br>
-    <h3 class="text-center" style="text-decoration: underline">INDEMNITY CERTIFICATE </h3>
+    <h4 class="text-center" style="text-decoration: underline">INDEMNITY CERTIFICATE </h4>
 </div>
 
 

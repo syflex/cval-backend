@@ -73,6 +73,7 @@ class CropClaimantController extends Controller
             'location' => $request->location,
             'community' => $request->community,
             'coordinates' => $request->coordinates,
+            'date' => $request->date,
             'image' => $request->image,
             'signature' => $request->c_signature,
         ]);   

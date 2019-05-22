@@ -22,6 +22,7 @@ class CreateCropClaimantsTable extends Migration
             $table->string('location')->nullable();
             $table->string('community')->nullable();
             $table->string('coordinates')->nullable();
+            $table->string('date')->nullable();
             $table->longText('image')->nullable();
             $table->longText('signature')->nullable();
             $table->longText('attorney_signature')->nullable();
