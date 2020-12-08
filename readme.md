@@ -21,6 +21,7 @@ Conpensation management syatem
 ## Installation
 
 ```
+git clone https://github.com/syflex/cval-backend.git
 composer install
 cp .env.example .env
 php artisan key:generate
